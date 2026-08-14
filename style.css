@@ -26,7 +26,11 @@ body {
 .wrap {
   max-width: var(--maxw);
   margin: 0 auto;
-  padding: 48px 0 64px;
+  padding: 48px 0 28px;
+  /* Lock the footer to the bottom so short content never leaves a white gap */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 a { color: var(--link); text-decoration: none; }
@@ -83,7 +87,7 @@ a:hover { color: var(--link-hover); }
 .links .sep { color: #bbb; margin: 0 8px; }
 
 /* ---- Sections ---- */
-section { margin-top: 40px; }
+section { margin-top: 30px; }
 h2 {
   font-size: 24px;
   font-weight: 600;
@@ -134,6 +138,7 @@ h2 {
 
 /* ---- Presentations ---- */
 .poster img {
+  display: block;
   max-width: 100%;
   height: auto;
   border: 1px solid var(--rule);
@@ -144,8 +149,8 @@ h2 {
 
 /* ---- Footer ---- */
 footer {
-  margin-top: 56px;
-  padding-top: 18px;
+  margin-top: auto;
+  padding-top: 16px;
   border-top: 1px solid var(--rule);
   font-size: 14px;
   color: var(--muted);
