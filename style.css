@@ -27,8 +27,11 @@ body {
   max-width: var(--maxw);
   margin: 0 auto;
   padding: 48px 0 28px;
-  /* Lock the footer to the bottom so short content never leaves a white gap */
+  /* Lock the footer to the bottom so short content never leaves a white gap.
+     Use svh (small viewport height) so mobile browser chrome can't make the
+     block taller than the visible screen and float the footer up. */
   min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   flex-direction: column;
 }
